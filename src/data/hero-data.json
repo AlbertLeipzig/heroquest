@@ -1,0 +1,10 @@
+{
+  "fullName": "John",
+  "role": "Barbarian",
+  "body": 8,
+  "move": 2,
+  "attack": 3,
+  "defense": 2,
+  "equipment": ["aaa", "bbb", "ccc"],
+  "gold": 250
+}

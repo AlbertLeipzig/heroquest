@@ -1,0 +1,22 @@
+{
+  "name": "Room Name",
+  "image": "https://images.unsplash.com/photo-1571989601904-c1b26bb0f25a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVuZ2VvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  "description": "alskdjasdlkajsd laksdj añsdkjas dñaksjd ñasdija pdñoiaj fpñasidvj añsdkas dñfsajd fñalskdf añsdlkfjas ñdfkasd ñfkasdf ñlaskdfj añsdfnkas dñfknsad fñkasdnf ñasdkfj añsdfkjas dñfkasd vñasknv ñasdlkva `fpwej fpaoejv àw9gjwae fosadj ñasijf añsdijs ",
+  "monsters": [
+    {
+      "name": "orc"
+    },
+    {
+      "name": "orc"
+    },
+    {
+      "name": "orc"
+    },
+    {
+      "name": "orc"
+    }
+  ],
+  "secretDoors": "undefined",
+  "traps": "undefined",
+  "treasures": "undefined"
+}

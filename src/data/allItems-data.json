@@ -1,0 +1,38 @@
+[
+  {
+    "itemId" : "aaa",
+    "itemName": "Broadsword",
+    "type": "Weapon",
+    "effect": { "type": "damage", "amount": 2 },
+    "description": "A sturdy and reliable sword for close combat.",
+    "cost": 100,
+    "load": { "location": "hand", "amount": 1 }
+  },
+  {
+    "itemId" : "bbb",
+    "itemName": "Healing Potion",
+    "type": "Potion",
+    "effect": { "type": "heal", "amount": 4 },
+    "description": "A magical elixir that heals wounds and injuries.",
+    "cost": 100,
+    "load": { "location": null, "amount": 0 }
+  },
+  {
+    "itemId" : "ccc",
+    "itemName": "Leather Armor",
+    "type": "Armor",
+    "effect": { "type": "defense", "amount": 1 },
+    "description": "Light and flexible armor that offers some protection.",
+    "cost": 100,
+    "load": { "location": "body", "amount": 1 }
+  },
+  {
+    "itemId" : "ddd",
+    "itemName": "Scroll of Fireball",
+    "type": "Magic Scroll",
+    "effect": { "type": "spell", "amount": "fireball" },
+    "description": "A scroll containing the powerful Fireball spell.",
+    "cost": 100,
+    "load": { "location": null, "amount": 0 }
+  }
+]
