@@ -4,9 +4,9 @@ export class Being implements IBeing {
   constructor(
     public role: string,
     public body: number,
-    public move: number,
-    public attack: number,
-    public defense: number
+    public movePoints: number,
+    public attackPoints: number,
+    public defensePoints: number
   ) {}
 }
 
@@ -18,11 +18,11 @@ export class Hero extends Being implements IHero {
       public gold: number,
       role: string,
       body: number,
-      move: number,
-      attack: number,
-      defense: number
+      movePoints: number,
+      attackPoints: number,
+      defensePoints: number
     ) {
-        super(role, body, move, attack, defense)
+        super(role, body, movePoints, attackPoints, defensePoints)
     }
   }
 
@@ -32,12 +32,12 @@ export class Monster extends Being implements IMonster {
     public monsterId: string,
     role: string,
     body: number,
-    move: number,
-    attack: number,
-    defense: number
+    movePoints: number,
+    attackPoints: number,
+    defensePoints: number
 
     ) {
-        super(role, body, move, attack, defense)
+        super(role, body, movePoints, attackPoints, defensePoints)
   }
 }
 
@@ -47,10 +47,10 @@ export class Npc extends Being implements INpc {
     public fullName: string,
     role: string,
     body: number,
-    move: number,
-    attack: number,
-    defense: number) {
-        super(role, body, move, attack, defense)
+    movePoints: number,
+    attackPoints: number,
+    defensePoints: number) {
+        super(role, body, movePoints, attackPoints, defensePoints)
     }
 }
 

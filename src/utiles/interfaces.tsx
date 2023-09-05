@@ -1,9 +1,14 @@
 export interface IBeing {
   role: string;
   body: number;
-  move: number;
-  attack: number;
-  defense: number;
+  movePoints: number;
+  attackPoints: number;
+  defensePoints: number;
+  scape(target: IBeing): void;
+  chase(target: IBeing): void;
+  attack(target: IBeing): void;
+  defense(target: IBeing): void;
+  loseBodyPoints(amount: number): void;
 }
 
 export interface IHero extends IBeing {
@@ -11,6 +16,14 @@ export interface IHero extends IBeing {
   fullName: string;
   equipment: string[];
   gold: number;
+  searchTraps(currentRoom: IRoom): void;
+  searchTreasure(currentRoom: IRoom): void;
+  disarmTraps(currentRoom: IRoom): void;
+  getTreasure(currentRoom: IRoom): void;
+  buyItem(item: IItem): void;
+  deductGold(item: IItem): void;
+  addToEquipment(item: IItem): void;
+  gainBodyPoints(amount: number): void;
 }
 
 export interface IMonster extends IBeing {
@@ -46,6 +59,9 @@ export interface IRoom {
   monsters: string[];
   traps: boolean;
   treasures: boolean;
+/*   generateMonsters(): IMonster[];
+  generateTraps(): ITrap[];
+  generateTreasures(): ITreasure[]; */
 }
 
 export interface ITrap {
@@ -56,9 +72,8 @@ export interface ITrap {
   disarmed: boolean;
 }
 
-
 export interface ITreasure {
-  treasureId : string;
-  description : string;
-  amount : number;
+  treasureId: string;
+  description: string;
+  amount: number;
 }
