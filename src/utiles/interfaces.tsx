@@ -1,31 +1,28 @@
 export interface IBeing {
-  beingId: string;
   role: string;
   body: number;
   move: number;
   attack: number;
   defense: number;
 }
-export interface IMonster extends IBeing {
-  monsterId: string;
-  beingId: never;
-}
 
 export interface IHero extends IBeing {
   heroId: string;
-  beingId: never;
   fullName: string;
   equipment: string[];
   gold: number;
 }
 
+export interface IMonster extends IBeing {
+  monsterId: string;
+}
+
 export interface INpc extends IBeing {
   npcId: string;
-  beingId: never;
   fullName: string;
 }
 
-export interface IItems {
+export interface IItem {
   itemId: string;
   itemName: string;
   type: string;
@@ -47,7 +44,21 @@ export interface IRoom {
   image: string;
   description: string;
   monsters: string[];
-  secretDoors: boolean;
   traps: boolean;
   treasures: boolean;
+}
+
+export interface ITrap {
+  trapId: string;
+  trapName: string;
+  damage: number;
+  discovered: boolean;
+  disarmed: boolean;
+}
+
+
+export interface ITreasure {
+  treasureId : string;
+  description : string;
+  amount : number;
 }
