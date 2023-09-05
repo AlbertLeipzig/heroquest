@@ -59,9 +59,9 @@ export interface IRoom {
   monsters: string[];
   traps: boolean;
   treasures: boolean;
-/*   generateMonsters(): IMonster[];
+  generateMonsters(): IMonster[];
   generateTraps(): ITrap[];
-  generateTreasures(): ITreasure[]; */
+  generateTreasures(): ITreasure[];
 }
 
 export interface ITrap {
