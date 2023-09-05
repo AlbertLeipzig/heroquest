@@ -6,16 +6,22 @@ export interface IBeing {
   attack: number;
   defense: number;
 }
+export interface IMonster extends IBeing {
+  monsterId: string;
+  beingId: never;
+}
 
 export interface IHero extends IBeing {
+  heroId: string;
+  beingId: never;
   fullName: string;
   equipment: string[];
   gold: number;
 }
 
-export interface IMonster extends IBeing {}
-
 export interface INpc extends IBeing {
+  npcId: string;
+  beingId: never;
   fullName: string;
 }
 
@@ -40,7 +46,7 @@ export interface IRoom {
   roomName: string;
   image: string;
   description: string;
-  monsters: IMonster[];
+  monsters: string[];
   secretDoors: boolean;
   traps: boolean;
   treasures: boolean;
