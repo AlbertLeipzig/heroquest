@@ -24,6 +24,8 @@ export const Home = () => {
         yours! So, gather your courage, sharpen your wits, and let the adventure
         begin. HeroQuest calls upon you to become a legend!
       </p>
+      <Link to="/combat">Combat</Link>
+      <Link to="/creatures-page">See the creatures</Link>
       <Link to="/quest">Enter the quest</Link>
     </div>
   );

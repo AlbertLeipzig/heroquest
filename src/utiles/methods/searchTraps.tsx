@@ -1,5 +1,5 @@
-import { IRoom} from "../interfaces";
+import { IRoom } from '../interfaces';
 
-export const searchTraps = (currentRoom : IRoom) : void {
-    console.log(currentRoom);
-}
+export const searchTraps = (currentRoom) => {
+  console.log(currentRoom);
+};

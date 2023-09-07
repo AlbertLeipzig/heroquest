@@ -34,12 +34,7 @@ export class Being implements IBeing {
     public attackPoints: number,
     public defensePoints: number
   ) {}
-  scape(target: IBeing): void {
-    scape(target);
-  }
-  chase(target: IBeing): void {
-    chase(target);
-  }
+
   attack(target: IBeing): void {
     attack(target);
   }
@@ -51,23 +46,23 @@ export class Being implements IBeing {
   }
 }
 
-export class Hero extends Being implements IHero {
-  private gameStatusUpdater : (status : possibleGameModes) => void;
-  constructor(
-    public heroId: string,
-    public fullName: string,
-    public equipment: string[],
-    public gold: number,
-    role: string,
-    body: number,
-    movePoints: number,
-    attackPoints: number,
-    defensePoints: number,
-    gameStatusUpdater : (status : possibleGameModes) => void;
-  ) {
+export class Hero extends Being {
+  public heroId: string;
+  public fullName: string;
+  public equipment: string[];
+  public gold: number;
+
+  constructor(hero: IHero) {
+    const { role, body, movePoints, attackPoints, defensePoints } = hero;
     super(role, body, movePoints, attackPoints, defensePoints);
-    this.gameStatusUpdater = gameStatusUpdater;
+    {
+    }
+    this.heroId = '0';
+    this.fullName = hero.fullName;
+    this.equipment = hero.equipment;
+    this.gold = hero.gold;
   }
+
   searchTraps(currentRoom: IRoom): void {
     searchTraps(currentRoom);
   }
@@ -92,21 +87,27 @@ export class Hero extends Being implements IHero {
   gainBodyPoints(amount: number): void {
     gainBodyPoints(amount);
   }
+  scape(target: IBeing): void {
+    scape(target);
+  }
+
   exitGame(): void {
-    this.gameStatusUpdater("finished")
+    this.gameStatusUpdater('finished');
   }
 }
 
-export class Monster extends Being implements IMonster {
-  constructor(
-    public monsterId: string,
-    role: string,
-    body: number,
-    movePoints: number,
-    attackPoints: number,
-    defensePoints: number
-  ) {
+export class Monster extends Being {
+  public monsterId: string;
+  constructor(monster: IMonster) {
+    const { role, body, movePoints, attackPoints, defensePoints } = monster;
+
     super(role, body, movePoints, attackPoints, defensePoints);
+    {
+      this.monsterId = '0';
+    }
+  }
+  chase(target: IBeing): void {
+    chase(target);
   }
 }
 
