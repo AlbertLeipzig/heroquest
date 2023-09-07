@@ -24,6 +24,7 @@ export interface IHero extends IBeing {
   deductGold(item: IItem): void;
   addToEquipment(item: IItem): void;
   gainBodyPoints(amount: number): void;
+  exitGame(): void;
 }
 
 export interface IMonster extends IBeing {
@@ -77,3 +78,5 @@ export interface ITreasure {
   description: string;
   amount: number;
 }
+
+export type possibleGameModes = 'exploration' | 'combat' | 'finished';

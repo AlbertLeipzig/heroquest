@@ -52,6 +52,7 @@ export class Being implements IBeing {
 }
 
 export class Hero extends Being implements IHero {
+  private gameStatusUpdater : (status : possibleGameModes) => void;
   constructor(
     public heroId: string,
     public fullName: string,
@@ -61,9 +62,11 @@ export class Hero extends Being implements IHero {
     body: number,
     movePoints: number,
     attackPoints: number,
-    defensePoints: number
+    defensePoints: number,
+    gameStatusUpdater : (status : possibleGameModes) => void;
   ) {
     super(role, body, movePoints, attackPoints, defensePoints);
+    this.gameStatusUpdater = gameStatusUpdater;
   }
   searchTraps(currentRoom: IRoom): void {
     searchTraps(currentRoom);
@@ -78,7 +81,7 @@ export class Hero extends Being implements IHero {
     getTreasure(currentRoom);
   }
   buyItem(item: IItem): void {
-    buyItem(item)
+    buyItem(item);
   }
   deductGold(item: IItem): void {
     deductGold(item);
@@ -88,6 +91,9 @@ export class Hero extends Being implements IHero {
   }
   gainBodyPoints(amount: number): void {
     gainBodyPoints(amount);
+  }
+  exitGame(): void {
+    this.gameStatusUpdater("finished")
   }
 }
 
@@ -129,13 +135,13 @@ export class Room implements IRoom {
     public treasures: boolean
   ) {}
   generateMonsters(): IMonster[] {
-    return generateMonsters()
+    return generateMonsters();
   }
   generateTraps(): ITrap[] {
-    return generateTraps()
+    return generateTraps();
   }
   generateTreasures(): ITreasure[] {
-    return generateTreasures()
+    return generateTreasures();
   }
 }
 
