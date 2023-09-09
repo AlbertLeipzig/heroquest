@@ -25,6 +25,7 @@ import { scape } from './methods/scape';
 import { getTreasure } from './methods/getTreasure';
 import { searchTraps } from './methods/searchTraps';
 import { searchTreasure } from './methods/searchTreasure';
+import { generateId } from './methods/generateId';
 
 export class Being implements IBeing {
   constructor(
@@ -34,12 +35,7 @@ export class Being implements IBeing {
     public attackPoints: number,
     public defensePoints: number
   ) {}
-  scape(target: IBeing): void {
-    scape(target);
-  }
-  chase(target: IBeing): void {
-    chase(target);
-  }
+
   attack(target: IBeing): void {
     attack(target);
   }
@@ -51,23 +47,23 @@ export class Being implements IBeing {
   }
 }
 
-export class Hero extends Being implements IHero {
-  private gameStatusUpdater : (status : possibleGameModes) => void;
-  constructor(
-    public heroId: string,
-    public fullName: string,
-    public equipment: string[],
-    public gold: number,
-    role: string,
-    body: number,
-    movePoints: number,
-    attackPoints: number,
-    defensePoints: number,
-    gameStatusUpdater : (status : possibleGameModes) => void;
-  ) {
+export class Hero extends Being {
+  public heroId: string;
+  public fullName: string;
+  public equipment: string[];
+  public gold: number;
+
+  constructor(hero: IHero) {
+    const { role, body, movePoints, attackPoints, defensePoints } = hero;
     super(role, body, movePoints, attackPoints, defensePoints);
-    this.gameStatusUpdater = gameStatusUpdater;
+    {
+    }
+    this.heroId = hero.heroId;
+    this.fullName = hero.fullName;
+    this.equipment = hero.equipment;
+    this.gold = hero.gold;
   }
+
   searchTraps(currentRoom: IRoom): void {
     searchTraps(currentRoom);
   }
@@ -92,21 +88,25 @@ export class Hero extends Being implements IHero {
   gainBodyPoints(amount: number): void {
     gainBodyPoints(amount);
   }
-  exitGame(): void {
-    this.gameStatusUpdater("finished")
+  scape(target: IBeing): void {
+    scape(target);
   }
 }
 
-export class Monster extends Being implements IMonster {
-  constructor(
-    public monsterId: string,
-    role: string,
-    body: number,
-    movePoints: number,
-    attackPoints: number,
-    defensePoints: number
-  ) {
+export class Monster extends Being {
+  public monsterId: string;
+  public frequency: number;
+  constructor(monster: IMonster) {
+    const { role, body, movePoints, attackPoints, defensePoints } = monster;
+
     super(role, body, movePoints, attackPoints, defensePoints);
+    {
+      this.monsterId = generateId('monster');
+      this.frequency = monster.frequency;
+    }
+  }
+  chase(target: IBeing): void {
+    chase(target);
   }
 }
 
@@ -130,9 +130,9 @@ export class Room implements IRoom {
     public roomName: string,
     public image: string,
     public description: string,
-    public monsters: string[],
-    public traps: boolean,
-    public treasures: boolean
+    public monsters: IMonster[],
+    public traps: ITrap[],
+    public treasures: ITreasure[]
   ) {}
   generateMonsters(): IMonster[] {
     return generateMonsters();
@@ -168,6 +168,7 @@ export class Trap implements ITrap {
     public trapId: string,
     public trapName: string,
     public damage: number,
+    public description: string,
     public discovered: boolean,
     public disarmed: boolean
   ) {}

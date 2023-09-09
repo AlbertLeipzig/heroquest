@@ -1,5 +1,5 @@
 import { IBeing } from "../interfaces";
 
-export const defense = (target : IBeing) : void {
+export const defense = (target : IBeing) : void => {
     console.log(target);
 }

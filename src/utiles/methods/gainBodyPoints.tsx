@@ -1,3 +1,3 @@
-export const gainBodyPoints = (amount : number) : void {
+export const gainBodyPoints = (amount : number) : void => {
     console.log(amount);
 }

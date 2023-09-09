@@ -3,64 +3,64 @@
     "monsterId": "m-aaa",
     "role": "goblin",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   },
-  {
+    {
     "monsterId": "m-bbb",
     "role": "orc",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   },
   {
     "monsterId": "m-ccc",
     "role": "fimir",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   },
   {
     "monsterId": "m-ddd",
     "role": "skeleton",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   },
   {
     "monsterId": "m-eee",
     "role": "zombie",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   },
   {
     "monsterId": "m-fff",
     "role": "mummy",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   },
   {
     "monsterId": "m-ggg",
     "role": "chaos warrior",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   },
   {
     "monsterId": "m-hhh",
     "role": "gargoyle",
     "body": 0,
-    "move": 0,
-    "attack": 0,
-    "defense": 0
+    "movePoints": 0,
+    "attackPoints": 0,
+    "defensePoints": 0
   }
 ]

@@ -1,0 +1,46 @@
+[
+  {
+    "heroId": "h-001",
+    "fullName": "Hero 1",
+    "role": "Barbarian",
+    "gold": 0,
+    "equipment": [],
+    "body": 8,
+    "movePoints": 2,
+    "attackPoints": 3,
+    "defensePoints": 2
+  },
+  {
+    "heroId": "h-001",
+    "fullName": "Hero 1",
+    "role": "Barbarian",
+    "equipment": [],
+    "gold": 0,
+    "body": 8,
+    "movePoints": 2,
+    "attackPoints": 3,
+    "defensePoints": 2
+  },
+  {
+    "heroId": "h-001",
+    "fullName": "Hero 1",
+    "role": "Barbarian",
+    "equipment": [],
+    "gold": 0,
+    "body": 8,
+    "movePoints": 2,
+    "attackPoints": 3,
+    "defensePoints": 2
+  },
+  {
+    "heroId": "h-001",
+    "fullName": "Hero 1",
+    "role": "Barbarian",
+    "equipment": [],
+    "gold": 0,
+    "body": 8,
+    "movePoints": 2,
+    "attackPoints": 3,
+    "defensePoints": 2
+  }
+]

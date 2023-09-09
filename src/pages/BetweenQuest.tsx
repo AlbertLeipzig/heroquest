@@ -1,9 +1,8 @@
 import allItemsData from '../data/allItems-data.json';
-import heroData from '../data/hero-data.json';
-import { ShopItemComponent } from '../components/ShopItemComponent';
-import { HeroItemComponent } from '../components/HeroItemComponent';
+/* import { ShopItemComponent } from '../components/ShopItemComponent';
+import { HeroItemComponent } from '../components/HeroItemComponent'; */
 
-const { equipment, gold } = heroData;
+import { ShopItemComponent, HeroItemComponent } from '../components/components';
 
 const findReferenceItem = (itemInputValue: string) => {
   return allItemsData.find((item) => item.itemId === itemInputValue);
@@ -13,7 +12,8 @@ const completeItemsList = (itemsList: string[]) => {
   return itemsList.map((item) => findReferenceItem(item));
 };
 
-const _items = completeItemsList(equipment);
+const _equipment = ['first'];
+const _items = completeItemsList(_equipment);
 
 export const BetweenQuests = () => {
   return (
