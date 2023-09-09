@@ -15,6 +15,7 @@ export interface IHero extends IBeing {
 
 export interface IMonster extends IBeing {
   monsterId: string;
+  frequency: number;
 }
 
 export interface INpc extends IBeing {
@@ -47,15 +48,16 @@ export interface IRoom {
   roomName: string;
   image: string;
   description: string;
-  monsters: string[];
-  traps: boolean;
-  treasures: boolean;
+  monsters: IMonster[];
+  traps: ITrap[];
+  treasures: ITreasure[];
 }
 
 export interface ITrap {
   trapId: string;
   trapName: string;
   damage: number;
+  description: string;
   discovered: boolean;
   disarmed: boolean;
 }

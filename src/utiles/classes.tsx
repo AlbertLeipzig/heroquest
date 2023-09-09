@@ -25,6 +25,7 @@ import { scape } from './methods/scape';
 import { getTreasure } from './methods/getTreasure';
 import { searchTraps } from './methods/searchTraps';
 import { searchTreasure } from './methods/searchTreasure';
+import { generateId } from './methods/generateId';
 
 export class Being implements IBeing {
   constructor(
@@ -57,7 +58,7 @@ export class Hero extends Being {
     super(role, body, movePoints, attackPoints, defensePoints);
     {
     }
-    this.heroId = '0';
+    this.heroId = hero.heroId;
     this.fullName = hero.fullName;
     this.equipment = hero.equipment;
     this.gold = hero.gold;
@@ -90,20 +91,18 @@ export class Hero extends Being {
   scape(target: IBeing): void {
     scape(target);
   }
-
-  exitGame(): void {
-    this.gameStatusUpdater('finished');
-  }
 }
 
 export class Monster extends Being {
   public monsterId: string;
+  public frequency: number;
   constructor(monster: IMonster) {
     const { role, body, movePoints, attackPoints, defensePoints } = monster;
 
     super(role, body, movePoints, attackPoints, defensePoints);
     {
-      this.monsterId = '0';
+      this.monsterId = generateId('monster');
+      this.frequency = monster.frequency;
     }
   }
   chase(target: IBeing): void {
@@ -131,9 +130,9 @@ export class Room implements IRoom {
     public roomName: string,
     public image: string,
     public description: string,
-    public monsters: string[],
-    public traps: boolean,
-    public treasures: boolean
+    public monsters: IMonster[],
+    public traps: ITrap[],
+    public treasures: ITreasure[]
   ) {}
   generateMonsters(): IMonster[] {
     return generateMonsters();
@@ -169,6 +168,7 @@ export class Trap implements ITrap {
     public trapId: string,
     public trapName: string,
     public damage: number,
+    public description: string,
     public discovered: boolean,
     public disarmed: boolean
   ) {}

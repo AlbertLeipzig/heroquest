@@ -1,0 +1,26 @@
+[
+  {
+    "trapId": "",
+    "trapName": "Pit Trap",
+    "damage": 0,
+    "discovered": false,
+    "disarmed": false,
+    "description": "A hidden pit in the floor that characters can fall into."
+  },
+  {
+    "trapId": "",
+    "trapName": "Arrow Trap",
+    "damage": 0,
+    "discovered": false,
+    "disarmed": false,
+    "description": "A trap that shoots arrows at characters when triggered."
+  },
+  {
+    "trapId": "",
+    "trapName": "Falling Block Trap",
+    "damage": 0,
+    "discovered": false,
+    "disarmed": false,
+    "description": "Large blocks or stones that fall from the ceiling when triggered."
+  }
+]
