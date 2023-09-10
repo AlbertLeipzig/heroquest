@@ -4,13 +4,16 @@ import { heroes, monsters } from '../utiles/cleanedData';
 export const CreaturesPage: React.FC = () => {
   return (
     <div className="creatures-page">
+      <h1>Creatures</h1>
       <div className="creatures-page__heroes-container">
         {heroes.map((hero: IHero) => (
           <div key={hero.heroId} className="hero">
             <h3>{hero.role}</h3>
-            <p>{hero.body}</p>
-            <p>{hero.attackPoints}</p>
-            <p>{hero.defensePoints}</p>
+            <div className="hero__stats">
+              <p>{hero.body} BP</p>
+              <p>{hero.attackPoints} AP</p>
+              <p>{hero.defensePoints} DP</p>
+            </div>
           </div>
         ))}
       </div>
@@ -18,9 +21,11 @@ export const CreaturesPage: React.FC = () => {
         {monsters.map((monster: IMonster) => (
           <div key={monster.monsterId} className="monster">
             <h3>{monster.role}</h3>
-            <p>{monster.body}</p>
-            <p>{monster.attackPoints}</p>
-            <p>{monster.defensePoints}</p>
+            <div className="monster__stats">
+              <p>{monster.body} BP</p>
+              <p>{monster.attackPoints} AP</p>
+              <p>{monster.defensePoints} DP</p>
+            </div>
           </div>
         ))}
       </div>

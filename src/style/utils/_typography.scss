@@ -1,0 +1,59 @@
+@use './_colors.scss' as *;
+
+@font-face {
+  font-family: Fondamento;
+  src: url('../../../public//Fondamento-Regular.ttf');
+}
+
+$Fondamento: 'Fondamento', sans-serif;
+
+* {
+  font-family: $Fondamento;
+}
+
+@mixin base-typography {
+  font-size: 1.8rem;
+  line-height: 1.6em;
+  color: $dungeonStoneGray;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: $dungeonStoneGray;
+}
+
+h2 {
+  font-size: 3.5rem;
+  color: $dungeonStoneGray;
+}
+
+h3 {
+  font-size: 2.1rem;
+  color: $dungeonStoneGray;
+  font-weight: 700;
+  margin: 1em 0 0.3em;
+}
+
+p {
+  @include base-typography;
+}
+
+a {
+  text-decoration: none;
+  @include base-typography;
+}
+
+li {
+  @include base-typography;
+}
+
+input::placeholder {
+  @include base-typography;
+}
+
+input[type='text-area'],
+text-area {
+  min-height: 80vh;
+  background-color: red;
+}

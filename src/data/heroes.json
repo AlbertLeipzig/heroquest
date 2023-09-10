@@ -2,7 +2,7 @@
   {
     "heroId": "h-001",
     "fullName": "Hero 1",
-    "role": "Barbarian",
+    "role": "barbarian",
     "gold": 0,
     "equipment": [],
     "body": 8,
@@ -13,10 +13,10 @@
   {
     "heroId": "h-001",
     "fullName": "Hero 1",
-    "role": "Barbarian",
+    "role": "dwarf",
     "equipment": [],
     "gold": 0,
-    "body": 8,
+    "body": 6,
     "movePoints": 2,
     "attackPoints": 3,
     "defensePoints": 2
@@ -24,10 +24,10 @@
   {
     "heroId": "h-001",
     "fullName": "Hero 1",
-    "role": "Barbarian",
+    "role": "elf",
     "equipment": [],
     "gold": 0,
-    "body": 8,
+    "body": 5,
     "movePoints": 2,
     "attackPoints": 3,
     "defensePoints": 2
@@ -35,10 +35,10 @@
   {
     "heroId": "h-001",
     "fullName": "Hero 1",
-    "role": "Barbarian",
+    "role": "mage",
     "equipment": [],
     "gold": 0,
-    "body": 8,
+    "body": 4,
     "movePoints": 2,
     "attackPoints": 3,
     "defensePoints": 2

@@ -7,19 +7,22 @@ import { CreaturesPage } from './pages/CreaturesPage';
 import { CombatPage } from './pages/CombatPage';
 import { GenerateRoom } from './pages/GenerateRoom';
 import { TempHeader } from './components/TempHeader';
+import './style/main.scss';
 function App() {
   return (
     <>
-    <TempHeader />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quest" element={<Quest />} />
-        <Route path="/between-quests" element={<BetweenQuests />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/creatures-page" element={<CreaturesPage />}></Route>
-        <Route path="/combat" element={<CombatPage />}></Route>
-        <Route path="/room" element={<GenerateRoom />}></Route>
-      </Routes>
+      <TempHeader />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quest" element={<Quest />} />
+          <Route path="/between-quests" element={<BetweenQuests />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/creatures-page" element={<CreaturesPage />}></Route>
+          <Route path="/combat" element={<CombatPage />}></Route>
+          <Route path="/room" element={<GenerateRoom />}></Route>
+        </Routes>
+      </main>
     </>
   );
 }
