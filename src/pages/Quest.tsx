@@ -1,33 +1,62 @@
-import roomData from '../data/room-data.json';
-import monstersData from '../data/monters.json';
+import { Room } from '../utiles/classes';
+import { IRoom } from '../utiles/interfaces';
 
-const findReferenceMonster = (monsterInputValue: string) => {
-  return monstersData.find(
-    (monster) => monster.monsterId === monsterInputValue
-  );
+import {
+  generateId,
+  generateMonsters,
+  generateRoomDescription,
+  generateTraps,
+  generateTreasures,
+  generateRoomName,
+  generateRoomImage,
+} from '../utiles/methods/methods-barrel';
+
+const roomData = {
+  roomId: generateId('room'),
+  roomName: generateRoomName(),
+  image: generateRoomImage(),
+  description: generateRoomDescription(),
+  monsters: generateMonsters(),
+  traps: generateTraps(),
+  treasures: generateTreasures(),
 };
 
-const completeMonsterList = (monsterList: string[]) => {
-  return monsterList.map((monster) => findReferenceMonster(monster));
-};
+const { roomId, roomName, image, description, monsters, traps, treasures } =
+  roomData;
 
-const data = completeMonsterList(roomData.monsters);
+const room = new Room(
+  roomId,
+  roomName,
+  image,
+  description,
+  monsters,
+  traps,
+  treasures
+);
 
 export const Quest = () => {
   return (
     <div className="quest">
-      <h1>{roomData.name}</h1>
-      <img src={roomData.image} alt="" />
-      <p>{roomData.description}</p>
-      {data.map((monster) => (
-        <>
-          <p>{monster?.role}</p>
-          <p>attack [{monster?.attack}]</p>
-          <p>defense [{monster?.defense}]</p>
-          <p>move [{monster?.move}]</p>
-          <p>body [{monster?.body}]</p>
-        </>
-      ))}
+      <h1>{room.roomName}</h1>
+      <img src={room.image} alt="" />
+      <p>{room.description}</p>
+      <ul>
+        {room?.traps.map((trap) => (
+          <li key={String(new Date())}>{trap.trapName}</li>
+        ))}
+      </ul>
+      <ul>
+        {room?.treasures.map((treasure) => (
+          <li key={String(new Date())}>
+            {treasure.description} : {treasure.amount}
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {room?.monsters.map((monster) => (
+          <li key={String(new Date())}>{monster.role}</li>
+        ))}
+      </ul>
     </div>
   );
 };

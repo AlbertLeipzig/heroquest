@@ -1,6 +1,6 @@
 [
   {
-    "trapId": "",
+    "trapId": "123123",
     "trapName": "Pit Trap",
     "damage": 0,
     "discovered": false,
@@ -8,7 +8,7 @@
     "description": "A hidden pit in the floor that characters can fall into."
   },
   {
-    "trapId": "",
+    "trapId": "12312313",
     "trapName": "Arrow Trap",
     "damage": 0,
     "discovered": false,
@@ -16,7 +16,7 @@
     "description": "A trap that shoots arrows at characters when triggered."
   },
   {
-    "trapId": "",
+    "trapId": "123123123",
     "trapName": "Falling Block Trap",
     "damage": 0,
     "discovered": false,
