@@ -110,7 +110,7 @@ export class Monster extends Being {
   }
 }
 
-export class Npc extends Being implements INpc {
+export class Npc extends Being {
   constructor(
     public npcId: string,
     public fullName: string,
@@ -124,7 +124,7 @@ export class Npc extends Being implements INpc {
   }
 }
 
-export class Room implements IRoom {
+export class Room {
   constructor(
     public roomId: string,
     public roomName: string,
@@ -132,7 +132,7 @@ export class Room implements IRoom {
     public description: string,
     public monsters: IMonster[],
     public traps: ITrap[],
-    public treasures: ITreasure[]
+    public treasure: ITreasure
   ) {}
   generateMonsters(): IMonster[] {
     return generateMonsters();
@@ -145,7 +145,7 @@ export class Room implements IRoom {
   }
 }
 
-export class Item implements IItem {
+export class Item  {
   constructor(
     public itemId: string,
     public itemName: string,
@@ -163,7 +163,7 @@ export class Item implements IItem {
   ) {}
 }
 
-export class Trap implements ITrap {
+export class Trap  {
   constructor(
     public trapId: string,
     public trapName: string,
@@ -174,9 +174,11 @@ export class Trap implements ITrap {
   ) {}
 }
 
-export class Treasure implements ITreasure {
+export class Treasure  {
   constructor(
     public treasureId: string,
+    public treasureName: string,
+    public type: string,
     public description: string,
     public amount: number
   ) {}

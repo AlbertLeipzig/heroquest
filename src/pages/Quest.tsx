@@ -1,5 +1,4 @@
 import { Room } from '../utiles/classes';
-import { IRoom } from '../utiles/interfaces';
 
 import {
   generateId,
@@ -18,10 +17,10 @@ const roomData = {
   description: generateRoomDescription(),
   monsters: generateMonsters(),
   traps: generateTraps(),
-  treasures: generateTreasures(),
+  treasure: generateTreasures(),
 };
 
-const { roomId, roomName, image, description, monsters, traps, treasures } =
+const { roomId, roomName, image, description, monsters, traps, treasure } =
   roomData;
 
 const room = new Room(
@@ -31,7 +30,7 @@ const room = new Room(
   description,
   monsters,
   traps,
-  treasures
+  treasure
 );
 
 export const Quest = () => {
@@ -42,19 +41,22 @@ export const Quest = () => {
       <p>{room.description}</p>
       <ul>
         {room?.traps.map((trap) => (
-          <li key={String(new Date())}>{trap.trapName}</li>
+          <li key={trap.trapId}>{trap.trapName}</li>
         ))}
       </ul>
       <ul>
-        {room?.treasures.map((treasure) => (
-          <li key={String(new Date())}>
-            {treasure.description} : {treasure.amount}
-          </li>
-        ))}
+        {room?.treasure && (
+          <div key={treasure.treasureId}>
+            <h3>{treasure.treasureName}</h3>
+            <p>{treasure.type}</p>
+            <p>{treasure.description}</p>
+            <p>{treasure.amount}</p>
+          </div>
+        )}
       </ul>
       <ul>
         {room?.monsters.map((monster) => (
-          <li key={String(new Date())}>{monster.role}</li>
+          <li key={monster.monsterId}>{monster.role}</li>
         ))}
       </ul>
     </div>

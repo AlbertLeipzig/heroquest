@@ -1,0 +1,51 @@
+[
+  {
+    "treasureId": "eee",
+    "treasureName": "Potion of Healing",
+    "type": "potion",
+    "description": "In a bundle of rags, you find a small bottle of bluish liquid. You can drink this healing potion at any time, restoring the number of Body Points equal to a roll of one die. You cannot, however, exceed your starting number of Body Points.",
+    "amount": 1
+  },
+  {
+    "treasureId": "qqq",
+    "treasureName": "Heroic Brew",
+    "type": "potion",
+    "description": "You are surprised to find a leather bag hanging on the wall. If you drink its contents before you attack, you can make two attacks instead of one.",
+    "amount": 2
+  },
+  {
+    "treasureId": "www",
+    "treasureName": "Potion of Strength ",
+    "type": "potion",
+    "description": "You find a small purple flask. You can drink this strange smelling liquid at any time, enabling you to roll two extra combat dice the next time you attack.",
+    "amount": 2
+  },
+  {
+    "treasureId": "rrr",
+    "treasureName": "Potion of Defense",
+    "type": "potion",
+    "description": "Amidst a collection of old bottles, you find a small vial containing clear liquid. You can drink this potion at any time, giving you two extra combat dice next time you defend.",
+    "amount": 2
+  },
+  {
+    "treasureId": "aaa",
+    "treasureName": "Gem!",
+    "type": "jewel",
+    "description": "Tucked into the toe of a old boot you find a small gem worth 35 gold coins. Record the money on your sheet.",
+    "amount": 35
+  },
+  {
+    "treasureId": "sss",
+    "treasureName": "Gold",
+    "type": "gold",
+    "description": "You find a loose stone and tear it from the wall. Behind it you discover a small leather pouch wrapped in an old rag. Peering inside, you find 25 gold coins",
+    "amount": 25
+  },
+  {
+    "treasureId": "ddd",
+    "treasureName": "Jewels",
+    "type": "jewel",
+    "description": "You find a small wooden box. It is simple-looking and very old. Within you discover that it is lined with velvet and contains very small jewels worth 50 gold coins.",
+    "amount": 50
+  }
+]

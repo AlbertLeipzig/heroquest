@@ -6,7 +6,7 @@ import { generateId } from './generateId';
 
 const generateSingleMonsterData = (): IMonster => {
   const randomMonsterData: IMonster = {
-    monsterId: generateId("monster"),
+    monsterId: generateId('monster'),
     role: 'Monster',
     body: 10,
     movePoints: 3,
@@ -18,8 +18,9 @@ const generateSingleMonsterData = (): IMonster => {
 };
 
 export const generateMonsters = (): IMonster[] => {
+  const monstersArray: IMonster[] = [];
+  const rollResult = rollMultipleDices(2);
   let numberOfMonsters = 0;
-  let rollResult = rollMultipleDices(2);
 
   if (rollResult < 5) {
     numberOfMonsters = 0;
@@ -36,8 +37,6 @@ export const generateMonsters = (): IMonster[] => {
   } else {
     numberOfMonsters = 0;
   }
-
-  const monstersArray: IMonster[] = [];
 
   // Generate monsters and push them into the array
   for (let i = 0; i < numberOfMonsters; i++) {

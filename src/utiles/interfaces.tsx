@@ -50,7 +50,7 @@ export interface IRoom {
   description: string;
   monsters: IMonster[];
   traps: ITrap[];
-  treasures: ITreasure[];
+  treasure: ITreasure;
 }
 
 export interface ITrap {
@@ -64,6 +64,8 @@ export interface ITrap {
 
 export interface ITreasure {
   treasureId: string;
+  treasureName: string;
+  type : string;
   description: string;
   amount: number;
 }
