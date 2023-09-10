@@ -10,7 +10,7 @@ import { TempHeader } from './components/TempHeader';
 function App() {
   return (
     <>
-      <TempHeader />
+    <TempHeader />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quest" element={<Quest />} />

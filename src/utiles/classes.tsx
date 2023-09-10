@@ -145,7 +145,7 @@ export class Room {
   }
 }
 
-export class Item  {
+export class Item {
   constructor(
     public itemId: string,
     public itemName: string,
@@ -163,7 +163,7 @@ export class Item  {
   ) {}
 }
 
-export class Trap  {
+export class Trap {
   constructor(
     public trapId: string,
     public trapName: string,
@@ -174,7 +174,7 @@ export class Trap  {
   ) {}
 }
 
-export class Treasure  {
+export class Treasure {
   constructor(
     public treasureId: string,
     public treasureName: string,
@@ -182,4 +182,22 @@ export class Treasure  {
     public description: string,
     public amount: number
   ) {}
+}
+
+export class QuestStatus extends Room {
+  public gameStatus: string;
+
+  constructor(
+    roomId: string,
+    roomName: string,
+    image: string,
+    description: string,
+    monsters: Monster[],
+    traps: Trap[],
+    treasure: Treasure,
+    gameStatus: string
+  ) {
+    super(roomId, roomName, image, description, monsters, traps, treasure);
+    this.gameStatus = gameStatus;
+  }
 }

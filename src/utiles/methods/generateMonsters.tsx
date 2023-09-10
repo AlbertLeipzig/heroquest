@@ -1,7 +1,6 @@
 import { IMonster } from '../interfaces';
 import { Monster } from '../classes';
 import { rollMultipleDices } from './rollDices';
-import monsterData from '../../data/monsters.json';
 import { generateId } from './generateId';
 
 const generateSingleMonsterData = (): IMonster => {

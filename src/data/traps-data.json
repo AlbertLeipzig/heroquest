@@ -8,7 +8,7 @@
     "description": "A hidden pit in the floor that characters can fall into."
   },
   {
-    "trapId": "12312313",
+    "trapId": "456745674567",
     "trapName": "Arrow Trap",
     "damage": 0,
     "discovered": false,
@@ -16,7 +16,7 @@
     "description": "A trap that shoots arrows at characters when triggered."
   },
   {
-    "trapId": "123123123",
+    "trapId": "45hwe5hweh",
     "trapName": "Falling Block Trap",
     "damage": 0,
     "discovered": false,

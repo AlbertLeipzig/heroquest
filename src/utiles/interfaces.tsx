@@ -65,9 +65,13 @@ export interface ITrap {
 export interface ITreasure {
   treasureId: string;
   treasureName: string;
-  type : string;
+  type: string;
   description: string;
   amount: number;
+}
+
+export interface IGameStatus extends IRoom {
+  gameStatus: 'exploration' | 'combat' | 'finished';
 }
 
 export type possibleGameModes = 'exploration' | 'combat' | 'finished';

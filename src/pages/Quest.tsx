@@ -1,4 +1,5 @@
 import { Room } from '../utiles/classes';
+import { DecissionDialog } from '../components/DecissionDialog';
 
 import {
   generateId,
@@ -34,11 +35,24 @@ const room = new Room(
 );
 
 export const Quest = () => {
+  /* const [questData, setQuestData] = useState({
+    roomId: '',
+    roomName: '',
+    image: '',
+    description: '',
+    traps: [],
+    monsters: [],
+    treasure: [],
+    gameStatus: '',
+  }); */
+
   return (
-    <div className="quest">
+    <div id={room.roomId} className="room">
       <h1>{room.roomName}</h1>
       <img src={room.image} alt="" />
       <p>{room.description}</p>
+      <DecissionDialog />
+
       <ul>
         {room?.traps.map((trap) => (
           <li key={trap.trapId}>{trap.trapName}</li>
