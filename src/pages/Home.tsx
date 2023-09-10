@@ -6,6 +6,7 @@ export const Home = () => {
       <img
         src="https://images.unsplash.com/photo-1569008593571-a98b326533a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxmYW50YXN5JTIwaWxsdXN0cmF0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
         alt=""
+        className="image_horizontal"
       />
       <p>
         Embark on a legendary adventure that will take you through mysterious
@@ -24,6 +25,9 @@ export const Home = () => {
         yours! So, gather your courage, sharpen your wits, and let the adventure
         begin. HeroQuest calls upon you to become a legend!
       </p>
+      <button>
+        <Link to="/quest">Enter</Link>
+      </button>
     </div>
   );
 };

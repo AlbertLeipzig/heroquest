@@ -35,42 +35,22 @@ const room = new Room(
 );
 
 export const Quest = () => {
-  /* const [questData, setQuestData] = useState({
-    roomId: '',
-    roomName: '',
-    image: '',
-    description: '',
-    traps: [],
-    monsters: [],
-    treasure: [],
-    gameStatus: '',
-  }); */
-
   return (
     <div id={room.roomId} className="room">
       <h1>{room.roomName}</h1>
-      <img src={room.image} alt="" />
+      <img src={room.image} alt="" className="image_horizontal" />
       <p>{room.description}</p>
       <DecissionDialog />
-
-      <ul>
-        {room?.traps.map((trap) => (
-          <li key={trap.trapId}>{trap.trapName}</li>
-        ))}
-      </ul>
-      <ul>
-        {room?.treasure && (
-          <div key={treasure.treasureId}>
-            <h3>{treasure.treasureName}</h3>
-            <p>{treasure.type}</p>
-            <p>{treasure.description}</p>
-            <p>{treasure.amount}</p>
-          </div>
-        )}
-      </ul>
       <ul>
         {room?.monsters.map((monster) => (
-          <li key={monster.monsterId}>{monster.role}</li>
+          <li key={monster.monsterId}>
+            <div className="monster__stats">
+              <h3>{monster.role}</h3>
+              <p>{monster.body} BP</p>
+              <p>{monster.attackPoints} AP</p>
+              <p>{monster.defensePoints} DP</p>
+            </div>
+          </li>
         ))}
       </ul>
     </div>

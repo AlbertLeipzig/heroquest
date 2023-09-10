@@ -1,0 +1,12 @@
+.creatures-page {
+  .hero {
+    &__stats {
+      display: flex;
+    }
+  }
+  .monster {
+    &__stats {
+      display: flex;
+    }
+  }
+}

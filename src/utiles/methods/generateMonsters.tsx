@@ -6,11 +6,11 @@ import { generateId } from './generateId';
 const generateSingleMonsterData = (): IMonster => {
   const randomMonsterData: IMonster = {
     monsterId: generateId('monster'),
-    role: 'Monster',
-    body: 10,
-    movePoints: 3,
-    attackPoints: 5,
-    defensePoints: 4,
+    role: 'goblin',
+    body: 1,
+    movePoints: 2,
+    attackPoints: 1,
+    defensePoints: 2,
     frequency: 0,
   };
   return randomMonsterData;
