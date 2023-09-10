@@ -6,9 +6,11 @@ import { Contact } from './pages/Contact';
 import { CreaturesPage } from './pages/CreaturesPage';
 import { CombatPage } from './pages/CombatPage';
 import { GenerateRoom } from './pages/GenerateRoom';
+import { TempHeader } from './components/TempHeader';
 function App() {
   return (
     <>
+      <TempHeader />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quest" element={<Quest />} />
