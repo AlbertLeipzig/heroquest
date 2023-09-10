@@ -6,7 +6,8 @@ import { rollMultipleDices } from './rollDices';
 export const generateTraps = (): ITrap[] => {
   const traps: ITrap[] = [];
 
-  const selectedTrap = trapsData[rollMultipleDices(1)];
+  const selectedTrap = trapsData[Math.floor(Math.random() * trapsData.length)];
+
   const { trapId, trapName, damage, discovered, disarmed, description } =
     selectedTrap;
 
