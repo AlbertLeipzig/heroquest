@@ -5,7 +5,7 @@ import { generateId } from './generateId';
 import monsterData from '../../data/monters.json';
 
 const generateSingleMonsterData = (): IMonster => {
-  const monster = monsterData[rollMultipleDices(2)];
+  const monster: IMonster = monsterData[rollMultipleDices(2)];
 
   const {
     monsterId,

@@ -3,13 +3,15 @@
     "monsterId": "m-aaa",
     "role": "goblin",
     "body": 0,
+    "frequency": 0,
     "movePoints": 0,
     "attackPoints": 0,
     "defensePoints": 0
   },
-    {
+  {
     "monsterId": "m-bbb",
     "role": "orc",
+    "frequency": 0,
     "body": 0,
     "movePoints": 0,
     "attackPoints": 0,
@@ -18,6 +20,7 @@
   {
     "monsterId": "m-ccc",
     "role": "fimir",
+    "frequency": 0,
     "body": 0,
     "movePoints": 0,
     "attackPoints": 0,
@@ -26,6 +29,7 @@
   {
     "monsterId": "m-ddd",
     "role": "skeleton",
+    "frequency": 0,
     "body": 0,
     "movePoints": 0,
     "attackPoints": 0,
@@ -34,6 +38,7 @@
   {
     "monsterId": "m-eee",
     "role": "zombie",
+    "frequency": 0,
     "body": 0,
     "movePoints": 0,
     "attackPoints": 0,
@@ -42,6 +47,7 @@
   {
     "monsterId": "m-fff",
     "role": "mummy",
+    "frequency": 0,
     "body": 0,
     "movePoints": 0,
     "attackPoints": 0,
@@ -50,6 +56,7 @@
   {
     "monsterId": "m-ggg",
     "role": "chaos warrior",
+    "frequency": 0,
     "body": 0,
     "movePoints": 0,
     "attackPoints": 0,
@@ -58,6 +65,7 @@
   {
     "monsterId": "m-hhh",
     "role": "gargoyle",
+    "frequency": 0,
     "body": 0,
     "movePoints": 0,
     "attackPoints": 0,

@@ -8,6 +8,7 @@ export const Home = () => {
         alt=""
         className="image_horizontal"
       />
+      <h2>Page in Construction!</h2>
       <p>
         Embark on a legendary adventure that will take you through mysterious
         dungeons, treacherous forests, and ancient castles. HeroQuest is not
