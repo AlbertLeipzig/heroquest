@@ -2,18 +2,32 @@ import { IMonster } from '../interfaces';
 import { Monster } from '../classes';
 import { rollMultipleDices } from './rollDices';
 import { generateId } from './generateId';
+import monsterData from '../../data/monters.json';
 
 const generateSingleMonsterData = (): IMonster => {
-  const randomMonsterData: IMonster = {
-    monsterId: generateId('monster'),
-    role: 'goblin',
-    body: 1,
-    movePoints: 2,
-    attackPoints: 1,
-    defensePoints: 2,
-    frequency: 0,
-  };
-  return randomMonsterData;
+  const monster = monsterData[rollMultipleDices(2)];
+
+  const {
+    monsterId,
+    frequency,
+    role,
+    body,
+    movePoints,
+    attackPoints,
+    defensePoints,
+  } = monster;
+
+  const singleMonsterData: IMonster = new Monster({
+    monsterId,
+    frequency,
+    role,
+    body,
+    movePoints,
+    attackPoints,
+    defensePoints,
+  });
+
+  return singleMonsterData;
 };
 
 export const generateMonsters = (): IMonster[] => {
