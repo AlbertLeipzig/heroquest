@@ -1,21 +1,24 @@
 import React from 'react';
-import { IItems } from '../utiles/interfaces';
 
 export const ItemComponent: React.FC<IItems> = ({ data }) => {
-  const { itemName, type, effect, description, cost, load } = data;
+  const { itemName, effect, description, cost, load } = data;
   return (
     <div className="item-component">
       <h3>{itemName}</h3>
-      <p>
-        {effect.type} : {effect.amount}
-      </p>
-      {load.location && (
+      <div className="item-component__main">
         <p>
-          {load.location} : {load.amount}
+          {effect.type} : {effect.amount}
         </p>
-      )}
-      <p>{cost} gold</p>
-      <p>{description}</p>
+        {load.location && (
+          <p>
+            {load.location} : {load.amount}
+          </p>
+        )}
+      </div>
+      <div className="item-component__shop">
+        <p>{cost} gold</p>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,6 @@ export const TempHeader = () => {
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/creatures-page">Creatures</NavLink>
-        <NavLink to="/quest">Quest</NavLink>
         <NavLink to="/between-quests">Between Quests</NavLink>
       </nav>
     </header>

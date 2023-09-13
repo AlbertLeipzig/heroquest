@@ -1,3 +1,11 @@
 header {
   padding: 2.5vh 5vw;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: fit-content;
+  margin: 0 auto;
+  gap: 10em;
+}

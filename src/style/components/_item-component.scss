@@ -1,0 +1,22 @@
+@use '../utils/colors' as *;
+
+.item-component {
+  border: 1px solid $treasureChestBrown;
+  display: grid;
+  grid-template-areas:
+    'title main .'
+    'shop shop shop';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: repeat(2, 1fr);
+
+  &__main {
+    background-color: green;
+  }
+
+  &__shop {
+    background-color: orange;
+  }
+  button {
+    margin: 0;
+  }
+}
