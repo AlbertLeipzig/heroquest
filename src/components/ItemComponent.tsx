@@ -1,9 +1,9 @@
-import React from 'react';
+import { IItem } from '../utiles/interfaces';
 
-export const ItemComponent: React.FC<IItems> = ({ data }) => {
-  const { itemName, effect, description, cost, load } = data;
+export const ItemComponent = ({ item }: { item: IItem }) => {
+  const { itemId, itemName, effect, description, cost, load } = item;
   return (
-    <div className="item-component">
+    <div className="item-component" key={itemId}>
       <h3>{itemName}</h3>
       <div className="item-component__main">
         <p>

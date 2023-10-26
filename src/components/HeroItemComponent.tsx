@@ -1,7 +1,7 @@
 import React from 'react';
-import { IItems } from '../utiles/interfaces';
+import { IItem } from '../utiles/interfaces';
 
-export const HeroItemComponent: React.FC<IItems> = ({ data }) => {
+export const HeroItemComponent: React.FC<IItem> = ({ data }) => {
   const { itemName, effect, load } = data;
   return (
     <div className="item-component">

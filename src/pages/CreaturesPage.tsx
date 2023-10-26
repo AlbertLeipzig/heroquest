@@ -10,13 +10,13 @@ export const CreaturesPage: React.FC = () => {
         {heroes.map((hero: IHero) => (
           <div key={hero.heroId} className="hero">
             <CreatureCard creature={hero} />
-            {/*
+            
             <h3>{hero.role}</h3>
             <div className="hero__stats">
               <p>{hero.body} BP</p>
               <p>{hero.attackPoints} AP</p>
               <p>{hero.defensePoints} DP</p>
-            </div> */}
+            </div>
           </div>
         ))}
       </div>

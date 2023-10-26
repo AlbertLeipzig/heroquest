@@ -1,34 +1,7 @@
 import { IMonster } from '../interfaces';
-import { Monster } from '../classes';
-import { rollMultipleDices } from './rollDices';
-import { generateId } from './generateId';
 import monsterData from '../../data/monters.json';
-
-const generateSingleMonsterData = (): IMonster => {
-  const monster: IMonster = monsterData[rollMultipleDices(2)];
-
-  const {
-    monsterId,
-    frequency,
-    role,
-    body,
-    movePoints,
-    attackPoints,
-    defensePoints,
-  } = monster;
-
-  const singleMonsterData: IMonster = new Monster({
-    monsterId,
-    frequency,
-    role,
-    body,
-    movePoints,
-    attackPoints,
-    defensePoints,
-  });
-
-  return singleMonsterData;
-};
+import { rollMultipleDices } from './rollDices';
+import { generateSingleMonster } from './generateSingleMonster';
 
 export const generateMonsters = (): IMonster[] => {
   const monstersArray: IMonster[] = [];
@@ -51,11 +24,11 @@ export const generateMonsters = (): IMonster[] => {
     numberOfMonsters = 0;
   }
 
-  // Generate monsters and push them into the array
   for (let i = 0; i < numberOfMonsters; i++) {
-    const singleMonsterData = generateSingleMonsterData();
-    const monster = new Monster(singleMonsterData);
-    monstersArray.push(monster);
+    const monster = generateSingleMonster();
+    if (monster) {
+      monstersArray.push(monster);
+    }
   }
 
   return monstersArray;
